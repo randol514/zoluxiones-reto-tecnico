@@ -1,0 +1,80 @@
+@use '../abstracts/_mixins' as mixin
+
+.site-form
+  width: 100%
+  margin: 0
+  padding: 0
+
+.site-form__rows
+  @include mixin.listnone
+
+.site-form__row
+  display: grid
+  gap: 20px
+
+.site-form__row-wrapper
+  margin-bottom: 16px
+  &:last-child
+    margin-bottom: 0
+
+.site-form__row-label
+  margin: 0
+  display: block
+  cursor: auto
+  font-family: var(--font-primary)
+  font-weight: var(--fw-semibold)
+  font-size: 14px
+  letter-spacing: 0
+  margin-bottom: 6px
+
+//columns
+.site-form__row--one
+  @include mixin.grid-columns(1)
+
+.site-form__row--two
+  @include mixin.grid-columns(2)
+
+.site-form__row--two-inline
+  gap: 0
+  display: grid
+  grid-template-columns: 140px 1fr
+
+.site-form__row--three
+  @include mixin.grid-columns(3)
+
+@include mixin.media(lg)
+  .site-form__row--three
+    @include mixin.grid-columns(2)
+
+@include mixin.media(md)
+  .site-form__row--two
+    @include mixin.grid-columns(1)
+  .site-form__row--three
+    @include mixin.grid-columns(1)
+
+//elements
+.site-form__checkboxs
+  margin-top: 20px
+
+.site-form__checkbox
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0
+
+.site-form__button
+  margin-top: 20px
+
+.site-form__terms
+  font-family: var(--font-primary)
+  font-weight: var(--fw-semibold)
+  color: var(--color-primary)
+  font-size: 12px
+  line-height: 20px
+  letter-spacing: 0.1px
+  text-decoration: underline
+  display: inline-block
+  margin-top: 12px
+
+@include mixin.media(md)
+  .site-form__button
+    margin-top: 25px

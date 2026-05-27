@@ -1,0 +1,184 @@
+@use '../abstracts/_mixins' as mixin
+
+*
+  transition: var(--transition)
+
+.site-wrapper
+  background-color: var(--color-secondary)
+  position: relative
+  overflow: hidden
+  padding: 0
+  padding-bottom: 0
+  box-sizing: border-box
+  position: relative
+  z-index: 2
+
+.site-styles
+  font-family: var(--font-primary)
+  font-weight: var(--fw-regular)
+  color: var(--text-main)
+  line-height: 20px
+  font-size: 15px
+  a
+    font-family: var(--font-primary)
+    font-weight: var(--fw-semibold)
+    color: var(--text-main)
+  p
+    margin-bottom: 12px
+    &:last-child
+      margin-bottom: 0
+  strong
+    font-weight: normal
+    font-family: var(--font-primary)
+    font-weight: var(--fw-semibold)
+  h1, h2, h3, h4, h5, h6
+    font-family: var(--font-primary)
+    font-weight: var(--fw-semibold)
+    color: var(--text-main)
+    margin: 0 0 25px 0
+    line-height: normal
+  h1
+    font-size: 30px
+  h2
+    font-size: 30px
+  h3
+    font-size: 30px
+  h4
+    font-size: 25px
+  h5
+    font-size: 25px
+  h6
+    font-size: 20px
+  li > ul, li > ol
+    padding: 0 0 0 0
+  li > ul:last-child, li > ol:last-child
+    padding-bottom: 0
+  ul
+    padding-left: 0
+    list-style: none
+    margin-top: 0
+    margin-bottom: 0
+    li
+      margin-bottom: 0
+      list-style: inherit
+      position: relative
+      padding-left: 23px
+      &::before
+        content: ""
+        width: 3px
+        height: 3px
+        border-radius: 100%
+        background-color: var(--text-main)
+        position: absolute
+        top: 8px
+        left: 9px
+  ol
+    padding-left: 16px
+    margin: 0
+    li
+      margin-bottom: 0
+      list-style: inherit
+  iframe
+    width: 100%
+    max-width: 560px
+  img
+    max-width: 100%
+    height: auto
+    margin-bottom: 39px
+  blockquote
+    padding: 20px
+    margin: 10px 0
+    p:last-child
+      margin: 0
+  table
+    width: auto
+    font-size: 14px
+  th
+    border: 1px solid var(--text-main)
+    font-family: var(--font-primary)
+    font-weight: var(--fw-bold)
+    padding: 8px 16px
+    vertical-align: middle
+  td
+    border: 1px solid var(--text-main)
+    padding: 8px 16px
+    vertical-align: middle
+  .left
+    text-align: left
+  .right
+    text-align: right
+  .center
+    text-align: center
+  .alignleft
+    display: inline
+    float: left
+    margin: 1em 1em 1em 0
+  .alignright
+    display: inline
+    float: right
+    margin: 1em 0 1em 1em
+  .aligncenter
+    clear: both
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+@include mixin.media(lg)
+  .site-styles
+    h1
+      font-size: 25px
+    h2
+      font-size: 25px
+    h3
+      font-size: 25px
+    h4
+      font-size: 20px
+    h5
+      font-size: 20px
+    h6
+      font-size: 18px
+
+@include mixin.media(sm)
+  .site-styles
+    h1
+      font-size: 22px
+    h2
+      font-size: 22px
+    h3
+      font-size: 22px
+    h4
+      font-size: 18px
+    h5
+      font-size: 18px
+    h6
+      font-size: 18px
+    table
+      display: block
+      width: 100%
+      overflow-x: auto
+      height: auto !important
+
+//page
+.site-page
+  padding-top: 120px
+  padding-bottom: 80px
+
+.site-page__title
+  margin-bottom: 50px
+  text-align: center
+
+@include mixin.media(lg)
+  .site-page
+    padding-top: 65px
+    padding-bottom: 65px
+
+  .site-page__title
+    margin-bottom: 40px
+
+@include mixin.media(sm)
+  .site-page
+    padding-top: 55px
+    padding-bottom: 55px
+
+  .site-page__title
+    margin-bottom: 30px

@@ -1,0 +1,67 @@
+@use '../../styles/abstracts/_mixins' as mixins
+
+.plans-page
+  padding-bottom: 70px
+  overflow: hidden
+
+.plans-page__content
+  padding-top: 50px
+
+.plans-page__top
+  max-width: 544px
+  width: 100%
+  margin: 0 auto
+  margin-top: 60px
+
+//user
+.plans-page__user
+  text-align: center
+
+.plans-page__user-title-text
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-bold)
+  color: var(--color-quinary)
+  font-size: 40px
+  line-height: 48px
+  letter-spacing: -0.6px
+  margin: 0
+
+.plans-page__user-text
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-regular)
+  color: var(--color-quinary)
+  font-size: 16px
+  line-height: 28px
+  letter-spacing: 0.1px
+  margin-top: 8px
+
+//Quotations
+.plans-page__quotations
+  margin-top: 32px
+
+.plans-page__bottom
+  max-width: 928px
+  width: 100%
+  margin: 0 auto
+  margin-top: 25px
+
+@include mixins.media(md)
+  .plans-page__content
+    padding-top: 35px
+
+  .plans-page__back
+    display: none
+
+  .plans-page__top
+    margin-top: 0
+
+  .plans-page__user
+    text-align: left
+
+  .plans-page__user-title-text
+    font-size: 28px
+    line-height: 36px
+    letter-spacing: -0.2px
+
+  .plans-page__bottom
+    margin-top: 32px

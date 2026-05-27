@@ -1,0 +1,104 @@
+@use '../../styles/abstracts/_mixins' as mixins
+
+.summary-page
+  overflow: hidden
+  padding-bottom: 112px
+
+.summary-page__content
+  padding-top: 50px
+  max-width: 928px
+  width: 100%
+  margin: auto
+
+.summary-page__title
+  margin-top: 30px
+
+.summary-page__title-text
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-bold)
+  color: var(--color-quinary)
+  font-size: 40px
+  line-height: 48px
+  letter-spacing: -0.6px
+  margin: 0
+
+.summary-page__card
+  margin-top: 48px
+  padding: 24px 32px 24px 32px
+  box-sizing: border-box
+  border-radius: 24px
+  box-shadow: 0px 2px 32px 0px rgba(174,172,243,0.25)
+  background-color: var(--color-white)
+
+.summary-page__card-top
+  border-bottom: 1px solid var(--color-septenary)
+  padding-bottom: 15px
+
+.summary-page__card-title-text
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-black)
+  color: var(--color-quinary)
+  font-size: 10px
+  line-height: 16px
+  letter-spacing: 0.8px
+  text-transform: uppercase
+
+.summary-page__card-user
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-bold)
+  color: var(--color-quinary)
+  font-size: 20px
+  line-height: 28px
+  letter-spacing: -0.2px
+  &::before
+    content: "\e908"
+    font-family: 'icomoon'
+    display: inline-block
+    vertical-align: top
+    margin-right: 12px
+
+.summary-page__card-bottom
+  padding-top: 15px
+
+.summary-page__card-subtitle
+  margin-bottom: 5px
+
+.summary-page__card-subtitle-text
+  margin: 0
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-bold)
+  color: var(--color-quinary)
+  font-size: 16px
+  line-height: 24px
+  letter-spacing: 0.2px
+
+.summary-page__card-item
+  margin-bottom: 15px
+  &:last-child
+    margin-bottom: 0
+
+.summary-page__card-item-text
+  font-family: var(--font-secondary)
+  font-weight: var(--fw-regular)
+  color: var(--color-quinary)
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.1px
+  margin-bottom: 3px
+  &:last-child
+    margin-bottom: 0
+
+@include mixins.media(md)
+  .summary-page
+    .menu__header-mobile
+      display: none
+
+  .summary-page__title
+    text-align: center
+
+  .summary-page__title-text
+    font-size: 32px
+    line-height: 40px
+
+  .summary-page__card
+    margin-top: 35px

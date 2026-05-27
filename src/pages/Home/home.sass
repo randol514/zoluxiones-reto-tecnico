@@ -1,0 +1,106 @@
+@use '../../styles/abstracts/_mixins' as mixins
+
+.home-page
+  position: relative
+  padding-top: 32px
+  padding-bottom: 100px
+  overflow: hidden
+
+.home-page__content
+  display: flex
+  gap: 150px
+
+.home-page__content-image
+  width: 480px
+  margin: 0
+
+.home-page__content-image-img
+  height: 560px
+  object-fit: cover
+  width: 100%
+  border-radius: 20px
+
+.home-page__content-form
+  width: 351px
+
+.home-page__content-form-subtitle
+  font-family: var(--font-primary)
+  font-weight: var(--fw-bold)
+  color: var(--color-primary)
+  font-size: 14px
+  line-height: 16px
+  letter-spacing: 0.4px
+  background: linear-gradient(86.01deg, #00F4E2 0%, #00FF7F 100%)
+  display: inline-block
+  border-radius: 4px
+  padding: 4px 8px
+
+.home-page__content-form-title-text
+  font-family: var(--font-primary)
+  font-weight: var(--fw-bold)
+  color: var(--color-primary)
+  font-size: 32px
+  line-height: 40px
+  letter-spacing: 0
+  margin: 0
+  margin-top: 16px
+
+.home-page__content-form-text
+  font-family: var(--font-primary)
+  font-weight: var(--fw-semibold)
+  color: var(--color-primary)
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.2px
+  margin-top: 8px
+
+.home-page__content-form-form
+  margin-top: 25px
+
+.home-page__content-form-image
+  display: none
+  width: 136px
+  margin: 0
+
+.home-page__content-form-img
+  width: 136px
+  height: 160px
+  object-fit: cover
+
+@include mixins.media(lg)
+  .home-page__content
+    gap: 50px
+
+@include mixins.media(md)
+  .home-page
+    padding-top: 10px
+    padding-bottom: 80px
+    overflow: inherit
+
+  .home-page__content
+    flex-wrap: wrap
+
+  .home-page__content-form
+    width: 100%
+
+  .home-page__content-image
+    display: none
+
+  .home-page__content-form-top
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 12px
+    padding-bottom: 20px
+    border-bottom: 1px solid var(--color-tetradecenary)
+
+  .home-page__content-form-title-text
+    font-size: 28px
+    line-height: 36px
+    letter-spacing: 0%
+
+  .home-page__content-form-text
+    margin-top: 24px
+
+  .home-page__content-form-image
+    display: block

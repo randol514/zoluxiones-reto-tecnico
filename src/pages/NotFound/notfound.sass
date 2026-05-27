@@ -1,0 +1,26 @@
+@use '../../styles/abstracts/_mixins' as mixin
+
+.notfound-page
+  padding: 80px 0
+
+.notfound-page__content
+  text-align: center
+
+.notfound-page__title
+  margin-bottom: 50px
+  font-family: var(--font-primary)
+  font-weight: var(--fw-semibold)
+  color: var(--color-primary)
+  font-size: 45px
+  line-height: 20px
+
+@include mixin.media(lg)
+  .notfound-page
+    padding: 70px 0
+
+@include mixin.media(sm)
+  .notfound-page
+    padding: 50px 0
+
+  .notfound-page__title
+    margin-bottom: 40px
