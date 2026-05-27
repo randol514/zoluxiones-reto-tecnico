@@ -1,4 +1,4 @@
-import Button from "../../ui/Button/Button";
+import Button from "@/components/ui/Button/Button";
 
 import imagePlanHome from "@/assets/images/plans/plan-home.svg";
 import imagePlanHomeClinical from "@/assets/images/plans/plan-home-clinical.svg";
