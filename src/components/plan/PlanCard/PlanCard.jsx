@@ -1,4 +1,4 @@
-import Button from "@/components/ui/Button/Button";
+import Button from "@/components/ui/button/Button";
 
 import imagePlanHome from "@/assets/images/plans/plan-home.svg";
 import imagePlanHomeClinical from "@/assets/images/plans/plan-home-clinical.svg";
@@ -8,7 +8,7 @@ import "./planCard.sass";
 import { useDispatch } from "react-redux";
 import { setPlan } from "@/features/plan/planSlice";
 
-import { useStorage } from "../../../hooks/useStorage";
+import { useStorage } from "@/hooks/useStorage";
 
 import { useNavigate } from "react-router-dom";
 
